@@ -1,0 +1,2 @@
+Matrix_9X9_Heatmaps_Jupyter_RG_2019-04-18 submitted is the original code as created by AJM. Inputs were modified iteratively but the code itself was not changed.
+MSDS458 Assignment #1 is the pdf version of the exploration of this code as described in https://canvas.northwestern.edu/courses/101750/assignments/618247.
