@@ -78,7 +78,7 @@ def sfLibraries(request):
     sql = merge_string2
     cur_write.execute(sql)
 
-    sql = f'DELETE FROM {str.upper(table)}_TEMP_PROD'
+    sql = f"DELETE FROM {str.upper(table)}_TEMP_PROD"
     cur_write.execute(sql)
 
     sql = "ALTER WAREHOUSE VET_DATA_WAREHOUSE SUSPEND"
