@@ -70,8 +70,10 @@ def sfLibraries(request):
     key_columns = ','.join(keys)
     fields = df_to_sf.columns.tolist()
     field_columns = ','.join(fields)
-    merge_string2 = f'MERGE INTO {str.upper(table)}_PROD USING {str.upper(table)}_TEMP_PROD ON '+' AND '.join(f'{str.upper(table)}_PROD.{x}={str.upper(table)}_TEMP_PROD.{x}' for x in keys) + f' WHEN NOT MATCHED THEN INSERT ({field_columns}) VALUES ' + '(' + ','.join(f'{str.upper(table)}_TEMP_PROD.{x}' for x in fields) + ')'
-
+    merge_string2 = f'MERGE INTO {str.upper(table)}_PROD USING {str.upper(table)}_TEMP_PROD ON '+' AND '.join(f'{str.upper(table)}_PROD.{x}={str.upper(table
+)}_TEMP_PROD.{x}' for x in keys) + f' WHEN NOT MATCHED THEN INSERT ({field_columns}) VALUES ' + '(' + ','.join(f'{str.upper(table)}_TEMP_PROD.{x}' for x in 
+fields) + ')'
+    
     sql = merge_string2
     cur_write.execute(sql)
 
